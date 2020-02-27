@@ -1,16 +1,21 @@
-<form [formGroup]="form" (ngSubmit)="handleRegister()">
-    <div class="wrapper" fxLayoutAlign="center center" fxLayout="column">
-        <mat-form-field appearance="outline">
-            <mat-label>Email</mat-label>
-            <input matInput placeholder="Email address..." formControlName="email">
-        </mat-form-field>
+<div class="container" fxLayoutAlign="center center" fxLayout="column">
+    <button class="logo" mat-icon-button (click)="loginGoogle()">
+        <img class="logo__image" src="../../../assets/images/google-logo.png" alt="Google Logo">
+    </button>
+    <form [formGroup]="form" (ngSubmit)="handleRegister()">
+        <div class="wrapper" fxLayoutAlign="center center" fxLayout="column">
+            <mat-form-field appearance="outline">
+                <mat-label>Email</mat-label>
+                <input matInput placeholder="Email address..." formControlName="email">
+            </mat-form-field>
 
-        <mat-form-field appearance="outline">
-            <mat-label>Password</mat-label>
-            <input matInput placeholder="Password..." formControlName="password">
-        </mat-form-field>
+            <mat-form-field appearance="outline">
+                <mat-label>Password</mat-label>
+                <input matInput placeholder="Password..." formControlName="password">
+            </mat-form-field>
 
-        <button mat-raised-button color="warn">Register</button>
-        <a routerLink="/auth/login">Already have an account?</a>
-    </div>
-</form>
+            <button mat-raised-button color="warn">Register</button>
+            <a routerLink="/auth/login">Already have an account?</a>
+        </div>
+    </form>
+</div>

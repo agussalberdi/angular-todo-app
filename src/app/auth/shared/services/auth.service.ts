@@ -50,4 +50,9 @@ export  class  AuthService {
         await  this.afAuth.auth.signInWithPopup(new auth.GoogleAuthProvider())
         this.router.navigate(['dashboard']);
     }
+
+    async deleteUser() {
+        await this.afAuth.auth.currentUser.delete();
+        this.router.navigate(['dashboard']);
+    }
 }

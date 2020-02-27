@@ -29,4 +29,8 @@ export class RegisterComponent implements OnInit {
 
         this.authService.register(email, password);
     }
+
+    loginGoogle() {
+        this.authService.loginWithGoogle();
+    }
 }

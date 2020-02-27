@@ -25,4 +25,8 @@ export class UserProfileComponent implements OnInit {
         console.log(form.get('image').value);
     }
 
+    deleteUser() {
+        this.authService.deleteUser();
+    }
+
 }

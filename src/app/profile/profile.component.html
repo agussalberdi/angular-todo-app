@@ -1,19 +1,25 @@
-<div *ngIf="user" class="container" fxLayout="column" fxLayoutAlign="center center">
+<div *ngIf="user" class="container" fxLayout="row" fxLayoutAlign="center center">
     <form>
         <div class="uploader">
             <app-image-uploader (event)="giveImage($event)"></app-image-uploader>
         </div>
     </form>
 
-    <p>User ID: {{ user.uid }}</p>
-    <p>Email: {{ user.email }}</p>
-    <div>
-        <span>Go back to Home?</span>
-        <mat-icon>home</mat-icon>
-    </div>
-    
-    <div>
-        <span>Delete account?</span>
-        <mat-icon>delete</mat-icon>
+    <div class="user">
+        <p>User ID: <strong>{{ user.uid }}</strong></p>
+        <p>Email: <strong>{{ user.email }}</strong></p>
+        <div>
+            <span>Go back to Home?</span>
+            <a mat-icon-button [routerLink]="['/dashboard']">
+                <mat-icon>home</mat-icon>
+            </a>
+        </div>
+        
+        <div>
+            <span>Delete account?</span>
+            <button mat-icon-button (click)="deleteUser()">
+                <mat-icon>delete</mat-icon>
+            </button>
+        </div>
     </div>
 </div>
