@@ -1,1 +1,19 @@
-<div>profile works!</div>
+<div *ngIf="user" class="container" fxLayout="column" fxLayoutAlign="center center">
+    <form>
+        <div class="uploader">
+            <app-image-uploader (event)="giveImage($event)"></app-image-uploader>
+        </div>
+    </form>
+
+    <p>User ID: {{ user.uid }}</p>
+    <p>Email: {{ user.email }}</p>
+    <div>
+        <span>Go back to Home?</span>
+        <mat-icon>home</mat-icon>
+    </div>
+    
+    <div>
+        <span>Delete account?</span>
+        <mat-icon>delete</mat-icon>
+    </div>
+</div>

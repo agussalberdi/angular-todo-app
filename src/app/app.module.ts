@@ -1,5 +1,6 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
+import { HttpClientModule } from '@angular/common/http'; 
 
 //third party
 import { AngularFireModule } from "@angular/fire";
@@ -11,6 +12,7 @@ import { NoopAnimationsModule } from '@angular/platform-browser/animations';
 import { AppRoutingModule } from './app-routing.module';
 import { SharedModule } from './shared/shared.module';
 import { AuthModule } from './auth/auth.module';
+import { ProfileModule } from './profile/profile.module';
 
 import { AppComponent } from './app.component';
 
@@ -32,6 +34,7 @@ const firebaseConfig = {
   ],
   imports: [
     BrowserModule,
+    HttpClientModule,
     AngularFireModule.initializeApp(firebaseConfig),
     AngularFireAuthModule,
     NoopAnimationsModule,
@@ -39,6 +42,7 @@ const firebaseConfig = {
     AppRoutingModule,
     SharedModule,
     AuthModule,
+    ProfileModule
   ],
   providers: [],
   bootstrap: [AppComponent]
