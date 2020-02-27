@@ -1,0 +1,16 @@
+<form [formGroup]="form" (ngSubmit)="handleLogin()">
+    <div class="wrapper" fxLayoutAlign="center center" fxLayout="column">
+        <mat-form-field appearance="outline">
+            <mat-label>Email</mat-label>
+            <input matInput placeholder="Email address..." formControlName="email">
+        </mat-form-field>
+
+        <mat-form-field appearance="outline">
+            <mat-label>Password</mat-label>
+            <input matInput placeholder="Password..." formControlName="password">
+        </mat-form-field>
+
+        <button mat-raised-button color="warn">Login</button>
+        <a routerLink="/auth/register">Not registered yet?</a>
+    </div>
+</form>
