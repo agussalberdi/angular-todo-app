@@ -31,8 +31,8 @@ export  class  AuthService {
         this.router.navigate(['dashboard']);
     }
 
-    async sendPasswordResetEmail(passwordResetEmail: string) {
-        return await this.afAuth.auth.sendPasswordResetEmail(passwordResetEmail);
+    async sendPasswordResetEmail(email: string) {
+        return await this.afAuth.auth.sendPasswordResetEmail(email, { url: 'http://localhost:4200/profile' });
     }
 
     async logout(){

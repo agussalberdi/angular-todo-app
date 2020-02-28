@@ -25,6 +25,10 @@ export class UserProfileComponent implements OnInit {
         console.log(form.get('image').value);
     }
 
+    resetPassword() {
+        this.authService.sendPasswordResetEmail(this.authService.afAuth.auth.currentUser.email);
+    }
+
     deleteUser() {
         this.authService.deleteUser();
     }
