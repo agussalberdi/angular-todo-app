@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { ShoppingService } from './../core/services/shopping.service';
 
 @Component({
     selector: 'app-dashboard',
@@ -6,7 +7,11 @@ import { Component, OnInit } from '@angular/core';
     styleUrls: ['./dashboard.component.scss']
 })
 export class DashboardComponent implements OnInit {
-    constructor() { }
+    products;
 
-    ngOnInit(): void { }
+    constructor(private shoppingService: ShoppingService) { }
+
+    ngOnInit() {
+        this.shoppingService.getProducts().subscribe(products => this.products = products);
+    }
 }

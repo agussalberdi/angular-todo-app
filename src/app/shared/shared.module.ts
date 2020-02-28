@@ -5,11 +5,13 @@ import { MaterialModule } from './../core/material.module';
 
 import { NavbarComponent } from './components/navbar/navbar.component';
 import { ImageUploaderComponent } from './components/image-uploader/image-uploader.component';
+import { DisplayDataComponent } from './components/display-data/display-data.component';
 
 @NgModule({
     declarations: [
         NavbarComponent,
-        ImageUploaderComponent
+        ImageUploaderComponent,
+        DisplayDataComponent
     ],
     imports: [ 
         CommonModule,
@@ -18,7 +20,8 @@ import { ImageUploaderComponent } from './components/image-uploader/image-upload
     ],
     exports: [
         NavbarComponent,
-        ImageUploaderComponent
+        ImageUploaderComponent,
+        DisplayDataComponent
     ],
     providers: [],
 })
