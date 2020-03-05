@@ -37,6 +37,6 @@ export class ToDoComponent implements OnInit {
     }
 
     renderIcon(isChecked: boolean) {
-        return isChecked ? 'check' : 'panorama_fish_eye';
+        return isChecked ? 'check_circle_outline' : 'panorama_fish_eye';
     }
 }

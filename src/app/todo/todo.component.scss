@@ -1,10 +1,21 @@
-.todo {
+.container {
+    margin: 50px;
 
-    &__list {
-        list-style: none;
+    .add {
 
-        &__check {
-            cursor: pointer;
+        button{
+            background-color: gainsboro;
+        }
+    }
+
+    .todo {
+    
+        &__list {
+            list-style: none;
+    
+            &__check {
+                cursor: pointer;
+            }
         }
     }
 }
