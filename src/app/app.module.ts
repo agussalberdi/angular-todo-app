@@ -5,6 +5,7 @@ import { HttpClientModule } from '@angular/common/http';
 //third party
 import { AngularFireModule } from "@angular/fire";
 import { AngularFireAuthModule } from "@angular/fire/auth";
+import { AngularFireDatabaseModule } from '@angular/fire/database';
 
 import { MaterialModule } from './core/material.module';
 import { NoopAnimationsModule } from '@angular/platform-browser/animations';
@@ -37,6 +38,7 @@ const firebaseConfig = {
     HttpClientModule,
     AngularFireModule.initializeApp(firebaseConfig),
     AngularFireAuthModule,
+    AngularFireDatabaseModule,
     NoopAnimationsModule,
     MaterialModule,
     AppRoutingModule,

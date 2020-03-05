@@ -1,0 +1,24 @@
+<div>
+    <h4>To Do List App</h4>
+</div>
+
+<div class="todo__add">
+    <input matInput type="text" #itemTitle>
+    <button mat-icon-button (click)="onAdd(itemTitle)">
+        <mat-icon>add</mat-icon>
+    </button>
+</div>
+
+<div class="todo">
+    <ul class="todo__list">
+        <li *ngFor="let item of toDoListArray">
+            <span class="todo__list__check" [class.text-success]="item.isChecked" (click)="alterCheck(item.$key, item.isChecked)">
+                <mat-icon>{{ renderIcon(item.isChecked) }}</mat-icon>
+            </span>
+            {{item.title}}
+            <span>
+                <mat-icon>delete</mat-icon>
+            </span>
+        </li>
+    </ul>
+</div>

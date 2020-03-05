@@ -1,0 +1,10 @@
+.todo {
+
+    &__list {
+        list-style: none;
+
+        &__check {
+            cursor: pointer;
+        }
+    }
+}

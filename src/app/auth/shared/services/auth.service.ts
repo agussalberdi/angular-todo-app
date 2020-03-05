@@ -23,12 +23,12 @@ export  class  AuthService {
 
     async login(email: string, password: string) {
         await this.afAuth.auth.signInWithEmailAndPassword(email, password);
-        this.router.navigate(['dashboard']);
+        this.router.navigate(['todo']);
     }
 
     async register(email: string, password: string) {
         await this.afAuth.auth.createUserWithEmailAndPassword(email, password);
-        this.router.navigate(['dashboard']);
+        this.router.navigate(['todo']);
     }
 
     async sendPasswordResetEmail(email: string) {
@@ -48,11 +48,11 @@ export  class  AuthService {
 
     async loginWithGoogle(){
         await  this.afAuth.auth.signInWithPopup(new auth.GoogleAuthProvider())
-        this.router.navigate(['dashboard']);
+        this.router.navigate(['todo']);
     }
 
     async deleteUser() {
         await this.afAuth.auth.currentUser.delete();
-        this.router.navigate(['dashboard']);
+        this.router.navigate(['auth/register']);
     }
 }

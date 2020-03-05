@@ -2,8 +2,8 @@ import { NgModule } from '@angular/core';
 import { Routes, RouterModule } from '@angular/router';
 
 const routes: Routes = [
-  { path: '', pathMatch: 'full', redirectTo: 'dashboard' },
-  { path: 'dashboard', loadChildren: () => import('./dashboard/dashboard.module').then(m => m.DashboardModule) }
+  { path: '', pathMatch: 'full', redirectTo: 'todo' },
+  { path: 'todo', loadChildren: () => import('./todo/todo.module').then(m => m.ToDoModule) }
 ];
 
 @NgModule({
