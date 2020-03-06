@@ -17,11 +17,11 @@ export class ToDoComponent implements OnInit {
                 this.toDoListArray = [];
                 item.forEach(elem => {
                     let x = elem.payload.toJSON();
-                    x["$key"] = elem.key;
+                    x['$key'] = elem.key;
                     this.toDoListArray.push(x);
                 });
 
-                this.toDoListArray.sort((a,b) => {
+                this.toDoListArray.sort((a, b) => {
                     return a.isChecked - b.isChecked;
                 });
             });
@@ -34,6 +34,10 @@ export class ToDoComponent implements OnInit {
 
     alterCheck($key: string, isChecked: boolean) {
         this.todoService.checkOrUncheckTitle($key, isChecked);
+    }
+
+    onRemove($key: string) {
+        this.todoService.removeTitle($key);
     }
 
     renderIcon(isChecked: boolean) {

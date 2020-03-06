@@ -14,12 +14,13 @@ export class ToDoService {
 
     addTitle(title: string) {
         this.toDoList.push({
-            title: title,
+            title,
             isChecked: false
         });
     }
 
     checkOrUncheckTitle($key: string, flag: boolean) {
+        console.log($key, flag);
         this.toDoList.update($key, { isChecked: flag });
     }
 

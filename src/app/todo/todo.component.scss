@@ -28,6 +28,14 @@
                     mat-icon {
                         vertical-align: middle;
                     }
+
+                    .text-success {
+                        color: greenyellow;
+                    }
+                }
+
+                &__delete {
+                    cursor: pointer;
                 }
             }
         }

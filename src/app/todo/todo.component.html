@@ -12,12 +12,12 @@
         <ul class="todo__list">
             <li class="todo__list__item" *ngFor="let item of toDoListArray" fxLayoutAlign="space-between start">
                 <div>
-                    <span class="todo__list__item__check" [class.text-success]="item.isChecked" (click)="alterCheck(item.$key, item.isChecked)">
-                        <mat-icon>{{ renderIcon(item.isChecked) }}</mat-icon>
+                    <span class="todo__list__item__check" (click)="alterCheck(item.$key, item.isChecked)">
+                        <mat-icon [class.text-success]="item.isChecked">{{ renderIcon(item.isChecked) }}</mat-icon>
                     </span>
                     {{item.title}}
                 </div>
-                <span>
+                <span class="todo__list__item__delete" (click)="onRemove(item.$key)">
                     <mat-icon color="warn">delete</mat-icon>
                 </span>
             </li>
