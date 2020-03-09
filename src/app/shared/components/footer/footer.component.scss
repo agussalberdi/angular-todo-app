@@ -1,0 +1,16 @@
+footer {
+    width: 100vw;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    background-color: black;
+    color: white;
+
+    .wrapper {
+        margin: 20px;
+
+        .author {
+            margin: 0;
+        }
+    }
+}

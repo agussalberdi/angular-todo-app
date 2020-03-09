@@ -1,14 +1,14 @@
-.container {
-    margin: 25px;
+.card {
+  max-width: 400px;
+  margin-top: 20px;
+  
+  .card__image {
+    background-image: url('../../assets/images/user-icon.png');
+    background-size: cover;
+  }
 
-    .uploader {
-        position: relative;
-        width: 200px;
-        height: 200px;
-        border: 1px solid black;
-    }
+  mat-icon {
+    font-size: 40px;
+  }
 
-    .user {
-        margin-left: 15px;
-    }
 }

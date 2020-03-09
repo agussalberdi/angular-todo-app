@@ -16,13 +16,8 @@ export class UserProfileComponent implements OnInit {
 
     ngOnInit() {
         this.authService.afAuth.user.subscribe(user => {
-            console.log(user);
             this.user = user;
         });
-    }
-
-    giveImage(form: FormGroup) {
-        console.log(form.get('image').value);
     }
 
     resetPassword() {

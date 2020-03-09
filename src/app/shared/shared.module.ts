@@ -4,12 +4,12 @@ import { RouterModule } from '@angular/router';
 import { MaterialModule } from './../core/material.module';
 
 import { NavbarComponent } from './components/navbar/navbar.component';
-import { ImageUploaderComponent } from './components/image-uploader/image-uploader.component';
+import { FooterComponent } from './components/footer/footer.component';
 
 @NgModule({
     declarations: [
         NavbarComponent,
-        ImageUploaderComponent
+        FooterComponent
     ],
     imports: [ 
         CommonModule,
@@ -18,7 +18,7 @@ import { ImageUploaderComponent } from './components/image-uploader/image-upload
     ],
     exports: [
         NavbarComponent,
-        ImageUploaderComponent
+        FooterComponent
     ],
     providers: [],
 })
