@@ -20,7 +20,6 @@ export class ToDoService {
     }
 
     checkOrUncheckTitle($key: string, flag: boolean) {
-        console.log($key, flag);
         this.toDoList.update($key, { isChecked: flag });
     }
 

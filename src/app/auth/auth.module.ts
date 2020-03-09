@@ -7,7 +7,6 @@ import { MaterialModule } from '../core/material.module';
 
 import { RegisterComponent } from './register/register.component';
 import { LoginComponent } from './login/login.component';
-import { ForgotPasswordComponent } from './forgot-password/forgot-password.component';
 
 const routes: Routes = [
     {
@@ -16,7 +15,6 @@ const routes: Routes = [
             { path: '', pathMatch: 'full', redirectTo: 'login' },
             { path:  'login', component:  LoginComponent},
             { path:  'register', component:  RegisterComponent },
-            { path:  'forgot-password', component:  ForgotPasswordComponent },
         ]
     }
 ];
@@ -24,8 +22,7 @@ const routes: Routes = [
 @NgModule({
     declarations: [
         RegisterComponent,
-        LoginComponent,
-        ForgotPasswordComponent
+        LoginComponent
     ],
     imports: [ 
         CommonModule,
