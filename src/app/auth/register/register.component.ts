@@ -33,4 +33,14 @@ export class RegisterComponent implements OnInit {
     loginGoogle() {
         this.authService.loginWithGoogle();
     }
+
+    get emailFormat() {
+        const control = this.form.get('email');
+        return control.hasError('email') && control.touched;
+    }
+    
+    get passwordInvalid() {
+        const control = this.form.get('password');
+        return control.hasError('required') && control.touched;
+    }
 }
