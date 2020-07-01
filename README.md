@@ -34,3 +34,6 @@ To get more help on the Angular CLI use `ng help` or go check out the [Angular C
 - Angular CLI
 - Typescript
 - Firebase Authentification & Database
+
+## Hosted Application
+- Url: https://ng-todo-app.netlify.app/
