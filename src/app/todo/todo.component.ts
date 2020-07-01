@@ -1,9 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-<<<<<<< HEAD
 import { ToDoService } from './services/todo.service';
-=======
-import { ToDoService } from './shared/services/todo.service';
->>>>>>> 2b05f96a752e099bcbf65524d0d7a8d91abec70c
 
 @Component({
     selector: 'app-todo',
