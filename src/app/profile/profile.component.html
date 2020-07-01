@@ -1,0 +1,30 @@
+<div fxLayoutAlign="center center">
+    <mat-card *ngIf="user" class="card">
+        <mat-card-header>
+        <div mat-card-avatar class="card__image"></div>
+        <mat-card-title>Email: <strong>{{ user.email }}</strong></mat-card-title>
+        <mat-card-subtitle>User ID: <strong>{{ user.uid }}</strong></mat-card-subtitle>
+        </mat-card-header>
+        <img mat-card-image src="../../assets/images/angular.png" alt="Image">
+        <mat-card-content>
+        <p>
+            This is the profile page.
+        </p>
+        </mat-card-content>
+        <mat-card-actions fxLayoutAlign="space-between center">
+            <div>
+                <span>Go back to Home?</span>
+                <a mat-icon-button color="primary" [routerLink]="['/todo']">
+                    <mat-icon>home</mat-icon>
+                </a>
+            </div>
+            
+            <div>
+                <span>Delete account?</span>
+                <button mat-icon-button color="warn" (click)="deleteUser()">
+                    <mat-icon>delete</mat-icon>
+                </button>
+            </div>
+        </mat-card-actions>
+    </mat-card>
+</div>

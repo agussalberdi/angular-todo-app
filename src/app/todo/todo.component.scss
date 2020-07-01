@@ -1,0 +1,43 @@
+.container {
+    margin: 50px;
+
+    .add {
+        width: 50vw;
+        border-radius: 10px;
+
+        button{
+            background-color: gainsboro;
+            border-radius: 0;
+        }
+    }
+
+    .todo {
+        width: 50vw;
+    
+        &__list {
+            list-style: none;
+            padding: 0;
+            
+            &__item {
+                padding: 10px;
+                border: 1px solid darkgray;
+
+                &__check {
+                    cursor: pointer;
+
+                    mat-icon {
+                        vertical-align: middle;
+                    }
+
+                    .text-success {
+                        color: greenyellow;
+                    }
+                }
+
+                &__delete {
+                    cursor: pointer;
+                }
+            }
+        }
+    }
+}

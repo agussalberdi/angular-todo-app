@@ -1,0 +1,14 @@
+.card {
+  max-width: 400px;
+  margin-top: 20px;
+  
+  .card__image {
+    background-image: url('../../assets/images/user-icon.png');
+    background-size: cover;
+  }
+
+  mat-icon {
+    font-size: 40px;
+  }
+
+}

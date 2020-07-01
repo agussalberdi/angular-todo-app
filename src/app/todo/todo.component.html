@@ -1,0 +1,26 @@
+<div class="container" fxLayout="column" fxLayoutAlign="center center">
+    <h4>To Do List App</h4>
+
+    <div class="add" fxLayoutAlign="center">
+        <input type="text" #itemTitle fxFlex="85">
+        <button mat-icon-button fxFlex="15" (click)="onAdd(itemTitle)">
+            <mat-icon>add</mat-icon>
+        </button>
+    </div>
+
+    <div class="todo">
+        <ul class="todo__list">
+            <li class="todo__list__item" *ngFor="let item of toDoListArray" fxLayoutAlign="space-between start">
+                <div>
+                    <span class="todo__list__item__check" (click)="alterCheck(item.$key, item.isChecked)">
+                        <mat-icon [class.text-success]="item.isChecked">{{ renderIcon(item.isChecked) }}</mat-icon>
+                    </span>
+                    {{item.title}}
+                </div>
+                <span class="todo__list__item__delete" (click)="onRemove(item.$key)">
+                    <mat-icon color="warn">delete</mat-icon>
+                </span>
+            </li>
+        </ul>
+    </div>
+</div>
