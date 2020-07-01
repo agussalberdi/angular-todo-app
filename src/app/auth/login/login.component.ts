@@ -38,7 +38,11 @@ export class LoginComponent implements OnInit {
         const control = this.form.get('email');
         return control.hasError('email') && control.touched;
     }
+<<<<<<< HEAD
 
+=======
+    
+>>>>>>> 2b05f96a752e099bcbf65524d0d7a8d91abec70c
     get passwordInvalid() {
         const control = this.form.get('password');
         return control.hasError('required') && control.touched;

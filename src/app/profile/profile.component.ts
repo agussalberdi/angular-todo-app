@@ -25,5 +25,4 @@ export class UserProfileComponent implements OnInit {
     deleteUser() {
         this.authService.deleteUser();
     }
-
 }
