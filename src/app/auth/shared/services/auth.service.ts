@@ -48,8 +48,9 @@ export class AuthService {
 
     async loginWithGoogle() {
         await this.afAuth.auth.signInWithPopup(new auth.GoogleAuthProvider());
-        const  user  =  JSON.parse(localStorage.getItem('user'));
-        return  user  !==  null;
+        this.router.navigate(['todo']);
+        // const  user  =  JSON.parse(localStorage.getItem('user'));
+        // return  user  !==  null;
     }
 
     async deleteUser() {

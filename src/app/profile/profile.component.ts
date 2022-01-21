@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { Observable } from 'rxjs';
 import { User } from 'firebase';
 import { AuthService } from '../auth/shared/services/auth.service';
 
@@ -8,14 +9,12 @@ import { AuthService } from '../auth/shared/services/auth.service';
     styleUrls: ['./profile.component.scss']
 })
 export class UserProfileComponent implements OnInit {
-    user: User;
+    user$: Observable<User>;
 
     constructor(private authService: AuthService) {}
 
     ngOnInit() {
-        this.authService.afAuth.user.subscribe(user => {
-            this.user = user;
-        });
+        this.user$ = this.authService.afAuth.user;
     }
 
     resetPassword() {
