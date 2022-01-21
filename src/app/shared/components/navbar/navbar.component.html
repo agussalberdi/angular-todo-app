@@ -3,7 +3,7 @@
       <span>TodoApp</span>
       <span class="example-spacer"></span>
 
-      <ng-container *ngIf="isLoggedIn">     
+      <ng-container *ngIf="user$ | async">     
         <a mat-icon-button [routerLink]="['/profile']">
           <mat-icon>person</mat-icon>
         </a>
